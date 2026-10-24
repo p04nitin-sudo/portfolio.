@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette: cool paper, deep indigo ink, ultramarine accent, one yellow highlight.
+   Values are "R G B" so Tailwind can add opacity (bg-ink/10 etc). */
+:root {
+  --paper: 238 237 245;   /* #EEEDF5 */
+  --ink: 20 18 43;        /* #14122B */
+  --accent: 59 45 255;    /* #3B2DFF */
+  --onaccent: 255 255 255;
+  --sun: 255 216 77;      /* #FFD84D */
+  --raised: 255 255 255;
+}
+.dark {
+  --paper: 17 15 36;      /* #110F24 */
+  --ink: 238 237 245;
+  --accent: 125 116 255;  /* #7D74FF */
+  --onaccent: 17 15 36;
+  --sun: 255 216 77;
+  --raised: 29 26 58;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-paper font-body text-ink antialiased;
+  }
+  ::selection {
+    background: rgb(var(--sun));
+    color: #14122b;
+  }
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Hero name: letters rise in once on load, then get heavier on hover. */
+@keyframes rise {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .letter {
+    display: inline-block;
+    font-variation-settings: "wght" 500;
+    transition: font-variation-settings 0.4s ease;
+    animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .letter:hover {
+    font-variation-settings: "wght" 800;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .letter {
+      animation: none;
+    }
+  }
+}
