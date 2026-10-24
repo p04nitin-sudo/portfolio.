@@ -20,23 +20,17 @@ Single-page portfolio: React (JSX) + Vite + Tailwind CSS v3. Backend ya database
 
 Fonts Google Fonts se aate hain, isliye pehli baar internet chahiye.
 
-## Apna content kaise badle
-**Sab content `src/data.js` me hai.** Wahan ye badlo:
+## how to change content
 - `profile`: naam, email, GitHub / LinkedIn links, status line
 - `about`: heading, paragraphs, facts
 - `projects`: naam, year, stack, description, `live` aur `repo` links
 - `skills`, `experience`: apni details
 
-Resume ke liye apni PDF ko `public/resume.pdf` naam se rakh do.
-Tab title / description `index.html` me badlo.
 
 ## Colors / fonts badalna
 - Colors: `src/index.css` ke upar `:root` (light) aur `.dark` (dark) variables
 - Fonts: `index.html` ka Google Fonts link + `tailwind.config.js` ka `fontFamily`
 
-## Deploy (free)
-**Vercel:** GitHub par push karo → vercel.com → Import project → Deploy (Vite auto-detect hota hai).
-**Netlify:** Build command `npm run build`, publish directory `dist`.
 
 ## Folder structure
 ```
