@@ -7,7 +7,7 @@ export const profile = {
   name: "Nitin Pandey",
   role: "Full-stack developer",
   location: "Delhi, India",
-  email: "pon4nitin@gmail.com",
+  email: "p04nitin@gmail.com",
   github: "https://github.com/p04nitin-sudo",
   linkedin: " https://www.linkedin.com/in/nitin-pandey-82ab79398?utm_source=share_via&utm_content=profile&utm_medium=member_android,
   resume: "Nitin_Pandey_Resume.pdf",
