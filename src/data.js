@@ -9,7 +9,7 @@ export const profile = {
   location: "Delhi, India",
   email: "p04nitin@gmail.com",
   github: "https://github.com/p04nitin-sudo",
-  linkedin: " https://www.linkedin.com/in/nitin-pandey-82ab79398?utm_source=share_via&utm_content=profile&utm_medium=member_android,
+  linkedin: "https://www.linkedin.com/in/nitin-pandey-82ab79398?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   resume: "Nitin_Pandey_Resume.pdf",
   status: "Open to full-time roles",
   intro:
